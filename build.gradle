@@ -73,6 +73,13 @@ tasks.withType(Test) {
     }
 }
 
+
+task _____Tests(type: Test) {
+    useJUnitPlatform {
+        includeTags '_____'
+    }
+}
+
 //task RunAllWithoutAuth(type: Test) {
 //    useJUnitPlatform {
 //        includeTags 'yandexmarket'
@@ -84,13 +91,6 @@ tasks.withType(Test) {
 //        includeTags 'instagram'
 //    }
 //}
-//
-//task TinkoffTests(type: Test) {
-//    useJUnitPlatform {
-//        includeTags 'tinkoff'
-//    }
-//}
-
 
 help {
     doFirst {
