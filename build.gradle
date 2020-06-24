@@ -73,12 +73,12 @@ tasks.withType(Test) {
     }
 }
 
-task RunAllWithoutAuth(type: Test) {
-    useJUnitPlatform {
-        includeTags 'yandexmarket'
-    }
-}
-
+//task RunAllWithoutAuth(type: Test) {
+//    useJUnitPlatform {
+//        includeTags 'yandexmarket'
+//    }
+//}
+//
 //task RunAllWithAuth(type: Test) {
 //    useJUnitPlatform {
 //        includeTags 'instagram'
