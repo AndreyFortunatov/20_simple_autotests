@@ -4,6 +4,7 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
+import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.byId;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
@@ -19,23 +20,23 @@ class TestYandexMarkerItemFind extends TestBase {
         step("Открываем сайт Яндекс", () ->
                 open("https://yandex.ru/")
         );
-        step("Находим Маркет и кликаем на его ссылку", () ->
+        step("Находим Маркет на странице и кликаем на него", () ->
                 $(byText("Маркет")).click()
         );
         step("Переходим в новое окно браузера где открылся Маркет", () ->
                 switchTo().window(1)
         );
-        step("Вводим в поле поиска объект поиска 'ssd' и начинаем искать нажав 'Enter'", () ->
+        step("Вводим в поле поиска объект поиска 'ssd' и нажимаем 'Enter'", () ->
                 $(byId("header-search")).val("ssd").pressEnter()
         );
-        step("Находим первый товар в результатах поиска и переходим на его карточку товара", () ->
-//              $x("//h3/a[1]").click();
+        step("Находим первый товар в результатах поиска и кликаем на заголовок чтобы перейти на его карточку товара", () ->
+              $x("//h3/a[1]").click()
         );
         step("Переходим в новое окно браузера где открылась карточка товара", () ->
-                switchTo().window(1)
+                switchTo().window(2)
         );
         step("Проверяем что в заголовке карточки товара присутствует текст, заданный в поиске", () ->
-//              $(".n-title__text").shouldHave(text(yandexMarketItemName));
+              $x("//h1").shouldHave(text("ssd"))
         );
     }
 }
