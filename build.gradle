@@ -73,9 +73,9 @@ tasks.withType(Test) {
     }
 }
 
-task GoogleTestsBySteps(type: Test) {
+task TestFindBySteps(type: Test) {
     useJUnitPlatform {
-        includeTags 'GoogleTestsBySteps'
+        includeTags 'TestFindBySteps'
     }
 }
 
