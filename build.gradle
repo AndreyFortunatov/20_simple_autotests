@@ -73,22 +73,21 @@ tasks.withType(Test) {
     }
 }
 
-
-task _____Tests(type: Test) {
+task GoogleTestsBySteps(type: Test) {
     useJUnitPlatform {
-        includeTags '_____'
+        includeTags 'GoogleTestsBySteps'
     }
 }
 
 //task RunAllWithoutAuth(type: Test) {
 //    useJUnitPlatform {
-//        includeTags 'yandexmarket'
+//        includeTags '___________'
 //    }
 //}
 //
 //task RunAllWithAuth(type: Test) {
 //    useJUnitPlatform {
-//        includeTags 'instagram'
+//        includeTags '________'
 //    }
 //}
 

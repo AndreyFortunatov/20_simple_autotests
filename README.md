@@ -1,6 +1,6 @@
 # 20 QA autotest examples
 
-Просто несколько примеров работы стека selenide+allure+selenoid. Будет обновляться и дополняться по необходимости.
+Примеры работы стека selenide+allure+selenoid. Будет обновляться и дополняться по необходимости.
 
 # 1 тест-кейс:
 Тест на проверку поиска товара в яндекс.маркете
@@ -10,12 +10,11 @@
 3. Открыть первый товар, появившийся в списке,
 4. Проверить, что в карточке товара присутствует текст “item”.
 
-Примечание: item - передаем значение из терминала, т.е. тест должен работать с любым товаром
+Примечание: нет.
 
 Запуск:
 ```sh
-gradle YandexMarketTests -DyandexMarketItem="название товара" -DisHeadless=true
+gradle YandexMarketTests -DisHeadless=true
 ```
-* yandexMarketItem (type string) - название товара, по дефолту "iphone",
 * isHeadless (type boolean) - режим запуска, может быть true / false, по дефолту true.
 
