@@ -13,7 +13,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps { //Checking out the repo
-                checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: '', url: 'https://github.com/Thascalos/autotests_example.git']]])             }
+                checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: '', url: 'https://github.com/AndreyFortunatov/20_simple_autotests.git']]])             }
         }
         stage('Unit & Integration Tests') {
             steps {
