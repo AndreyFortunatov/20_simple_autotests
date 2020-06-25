@@ -84,6 +84,12 @@ task TestFindBySteps(type: Test) {
     }
 }
 
+task TestYandexMarkerItemFind(type: Test) {
+    useJUnitPlatform {
+        includeTags 'TestYandexMarkerItemFind'
+    }
+}
+
 //task RunAllWithAuth(type: Test) {
 //    useJUnitPlatform {
 //        includeTags '________'
