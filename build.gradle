@@ -52,9 +52,14 @@ dependencies {
     testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:${junitVersion}")
 }
 
-tasks.withType(JavaCompile) {
+compileTestJava {
     options.encoding = 'UTF-8'
 }
+
+// вариант выше применяет кодировку не только на тесты, но и на основной код приложения
+//tasks.withType(JavaCompile) {
+//    options.encoding = 'UTF-8'
+//}
 
 tasks.withType(Test) {
     systemProperties = System.properties as Map<String, ?>
