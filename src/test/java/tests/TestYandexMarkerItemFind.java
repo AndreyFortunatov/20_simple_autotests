@@ -30,13 +30,13 @@ class TestYandexMarkerItemFind extends TestBase {
                 $(byId("header-search")).val("ssd").pressEnter()
         );
         step("Находим первый товар в результатах поиска и кликаем на заголовок чтобы перейти на его карточку товара", () ->
-              $x("//h3/a[1]").click()
+                $x("//h3/a[1]").click()
         );
         step("Переходим в новое окно браузера где открылась карточка товара", () ->
                 switchTo().window(2)
         );
         step("Проверяем что в заголовке карточки товара присутствует текст, заданный в поиске", () ->
-              $x("//h1").shouldHave(text("ssd"))
+                $x("//h1").shouldHave(text("ssd"))
         );
     }
 }
