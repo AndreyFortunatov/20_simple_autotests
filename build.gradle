@@ -84,15 +84,15 @@ task TestFindBySteps(type: Test) {
     }
 }
 
-//task RunAllWithoutAuth(type: Test) {
-//    useJUnitPlatform {
-//        includeTags '___________'
-//    }
-//}
-//
 //task RunAllWithAuth(type: Test) {
 //    useJUnitPlatform {
 //        includeTags '________'
+//    }
+//}
+
+//task RunAllWithoutAuth(type: Test) {
+//    useJUnitPlatform {
+//        includeTags '___________'
 //    }
 //}
 
