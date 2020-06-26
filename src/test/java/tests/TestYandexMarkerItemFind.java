@@ -26,17 +26,18 @@ class TestYandexMarkerItemFind extends TestBase {
         step("Переходим в новое окно браузера где открылся Маркет", () ->
                 switchTo().window(1)
         );
-        step("Вводим в поле поиска объект поиска 'ssd' и нажимаем 'Enter'", () ->
-                $(byId("header-search")).val("ssd").pressEnter()
+        step("Вводим в поле поиска объект поиска 'HUAWEI P40 Lite' и нажимаем 'Enter'", () ->
+                $(byId("header-search")).val("HUAWEI P40 Lite").pressEnter()
         );
         step("Находим первый товар в результатах поиска и кликаем на заголовок чтобы перейти на его карточку товара", () ->
-                $x("//h3/a[1]").click()
+                $("h3 a").click()
+//              $("h3").$("a").click()
         );
         step("Переходим в новое окно браузера где открылась карточка товара", () ->
                 switchTo().window(2)
         );
         step("Проверяем что в заголовке карточки товара присутствует текст, заданный в поиске", () ->
-                $x("//h1").shouldHave(text("ssd"))
+                $("h1").shouldHave(text("HUAWEI P40 Lite"))
         );
     }
 }
