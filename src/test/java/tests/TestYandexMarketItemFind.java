@@ -10,9 +10,10 @@ import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
 import static io.qameta.allure.Allure.step;
 
+//import static helpers.Environment.*;
 
 @Tag("TestYandexMarketItemFind")
-class TestYandexMarketItemFind extends TestBase {
+public class TestYandexMarketItemFind extends TestBase {
 
     @Test
     @DisplayName("Найти в магазине Яндекс.Маркет заданный элемент с возможностью подставить свой через терминал")
@@ -27,7 +28,7 @@ class TestYandexMarketItemFind extends TestBase {
                 switchTo().window(1)
         );
         step("Вводим в поле поиска объект поиска 'HUAWEI P40 Lite' и нажимаем 'Enter'", () ->
-                $(byId("header-search")).val("HUAWEI P40 Lite").pressEnter()
+                $(byId("header-search")).setValue("HUAWEI P40 Lite").pressEnter()
         );
         step("Находим первый товар в результатах поиска и кликаем на заголовок чтобы перейти на его карточку товара", () ->
                 $("h3 a").click()
