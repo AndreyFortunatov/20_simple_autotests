@@ -11,8 +11,8 @@ import static com.codeborne.selenide.Selenide.*;
 import static io.qameta.allure.Allure.step;
 
 
-@Tag("TestYandexMarkerItemFind")
-class TestYandexMarkerItemFind extends TestBase {
+@Tag("TestYandexMarketItemFind")
+class TestYandexMarketItemFind extends TestBase {
 
     @Test
     @DisplayName("Найти в магазине Яндекс.Маркет заданный элемент с возможностью подставить свой через терминал")
