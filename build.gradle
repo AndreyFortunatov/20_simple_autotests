@@ -102,13 +102,25 @@ task TestYandexMarkerItemFind(type: Test) {
 //    }
 //}
 
+
+
+
+
+
+
+
+
+
+
+
+
 help {
     doFirst {
         println ""
         println "************************************************************************ "
         println "***                                                                  *** "
         println "*** Welcome to                                                       *** "
-        println "*** https://github.com/autotests-cloud/facebook-tests                *** "
+        println "*** https://github.com/AndreyFortunatov/20_simple_autotests          *** "
         println "***                                                                  *** "
         println "*** Requirements for tests:                                          *** "
         println "*** - idea (here you are)                                            *** "
@@ -117,8 +129,7 @@ help {
         println "*** - install gradle                                                 *** "
         println "***                                                                  *** "
         println "*** You can run tests by one of the following commands:              *** "
-        println "*** ./gradlew facebook_tests                                         *** "
-        println "*** ./gradlew google_tests                                           *** "
+        println "*** ./gradlew название теста                                         *** "
         println "***                                                                  *** "
         println "************************************************************************ "
         println ""
