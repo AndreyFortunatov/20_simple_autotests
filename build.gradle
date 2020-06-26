@@ -84,9 +84,9 @@ task TestFindBySteps(type: Test) {
     }
 }
 
-task TestYandexMarkerItemFind(type: Test) {
+task TestYandexMarketItemFind(type: Test) {
     useJUnitPlatform {
-        includeTags 'TestYandexMarkerItemFind'
+        includeTags 'TestYandexMarketItemFind'
     }
 }
 
